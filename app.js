@@ -62,6 +62,12 @@ const showwinner = (winner) => {
     disableboxes();
 }
 
+const showDraw = () => {
+    msg.innerText = "It's a Draw!";
+    msgcontainer.classList.remove("hide");
+    container.classList.add("hide");
+    disableboxes();
+}
 
 const checkwinner = () => {
     for(let pattern of winPatterns){
@@ -75,6 +81,9 @@ const checkwinner = () => {
                 showwinner(pos1val);
             }
         }
+    }
+ if ([...boxes].every(box => box.innerText !== "")) {
+        showDraw();
     }
 };
 
