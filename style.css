@@ -25,6 +25,39 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
+    animation: slideFadeIn 1s ease-in-out;
+}
+
+.background-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 20s infinite ease-in-out;
+    opacity: 0.3;
+}
+
+.shape-small {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    top: 20%;
+    animation-duration: 18s;
+}
+
+.shape-medium {
+    width: 100px;
+    height: 100px;
+    right: 15%;
+    bottom: 25%;
+    animation-duration: 25s;
+}
+
+.shape-large {
+    width: 150px;
+    height: 150px;
+    left: 75%;
+    top: 65%;
+    animation-duration: 22s;
 }
 
 .box {
@@ -38,6 +71,12 @@ body {
     background-color: #c15b0d;
 }
 
+.box:hover { 
+    animation: pulse 1s infinite alternate; 
+    background-color: #6ee8ed;
+    
+}
+
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
@@ -45,6 +84,10 @@ body {
     border-radius: 1rem;
     border: none;
 }
+
+#reset-btn:active{
+    font-weight: bold;
+} 
  
 #new-btn {
     padding: 1rem;
@@ -52,6 +95,16 @@ body {
     background-color: #2D5D7B;
     border-radius: 1rem;
     border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#new-btn:active{
+    font-weight: bold;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    animation: shake 0.3s ease-in-out;
+    background-color: #a83f9e;
 }
 
 #msg {
@@ -70,4 +123,71 @@ body {
 
 .hide {
      display: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Float up slightly */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFadeIn {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05); /* Slight pulsing effect */
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
