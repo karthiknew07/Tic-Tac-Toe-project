@@ -10,6 +10,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+h1{
+    color: #b5179e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .container {
     height: 70vh;
     display: flex;
@@ -67,8 +73,9 @@ body {
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     font-size: 10vmin;
-    color: #0a2851;
-    background-color: #c15b0d;
+    color: #000000;
+    background-color: #3f37c9;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .box:hover { 
@@ -83,6 +90,7 @@ body {
     background-color: #2D5D7B;
     border-radius: 1rem;
     border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 #reset-btn:active{
@@ -110,6 +118,8 @@ body {
 #msg {
     color: #03157d;
     font-size: 10vmin;
+    opacity: 0;
+    animation: bounceIn 3s ease forwards; 
 }
 
 .msg-container {
