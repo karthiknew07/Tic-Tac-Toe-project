@@ -1,5 +1,4 @@
-<h4>Hi, This is karthik</h4>  
- <h2>Tic-Tac-Toe Game</h2>
+ <h1>Tic-Tac-Toe Game</h1>
  <h3>Overview:</h3>
 This project is a digital implementation of the classic two-player game, Tic-Tac-Toe, also known as Noughts and Crosses. It provides an interactive, user-friendly interface for players to compete against each other
 <h3>Features:</h3>
